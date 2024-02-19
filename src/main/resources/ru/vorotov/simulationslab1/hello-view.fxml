@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.vorotov.simulationslab1.Lab1Controller">
+    <children>
+        <ToolBar prefHeight="38.0" prefWidth="900.0">
+            <items>
+                <Button mnemonicParsing="false" onAction="#onStartButtonClick" text="Start" />
+                <Button mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" />
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="Height">
+                    <graphic>
+                        <TextField fx:id="heightField" nodeOrientation="LEFT_TO_RIGHT" text="0" />
+                    </graphic>
+                </Label>
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="Speed">
+                    <graphic>
+                        <TextField fx:id="speedField" nodeOrientation="LEFT_TO_RIGHT" text="12" />
+                    </graphic>
+                </Label>
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="Angle">
+                    <graphic>
+                        <TextField fx:id="angleField" nodeOrientation="LEFT_TO_RIGHT" text="35" />
+                    </graphic>
+                </Label>
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="Size">
+                    <graphic>
+                        <TextField fx:id="sizeField" nodeOrientation="LEFT_TO_RIGHT" text="0.1" />
+                    </graphic>
+                </Label>
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="Weight">
+                    <graphic>
+                        <TextField fx:id="weightField" nodeOrientation="LEFT_TO_RIGHT" text="1" />
+                    </graphic>
+                </Label>
+            </items>
+        </ToolBar>
+        <ToolBar prefHeight="40.0" prefWidth="200.0">
+            <items>
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="Step">
+                    <graphic>
+                        <TextField fx:id="stepField" nodeOrientation="LEFT_TO_RIGHT" text="0.1" />
+                    </graphic>
+                </Label>
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="Distance">
+                    <graphic>
+                        <TextField fx:id="distanceField" editable="false" nodeOrientation="LEFT_TO_RIGHT" />
+                    </graphic>
+                </Label>
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="Max height">
+                    <graphic>
+                        <TextField fx:id="maxHeightField" editable="false" nodeOrientation="LEFT_TO_RIGHT" />
+                    </graphic>
+                </Label>
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="vx">
+                    <graphic>
+                        <TextField fx:id="vxField" editable="false" nodeOrientation="LEFT_TO_RIGHT" />
+                    </graphic>
+                </Label>
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="vy">
+                    <graphic>
+                        <TextField fx:id="vyField" editable="false" nodeOrientation="LEFT_TO_RIGHT" />
+                    </graphic>
+                </Label>
+                <Label nodeOrientation="RIGHT_TO_LEFT" text="Time">
+                    <graphic>
+                        <TextField fx:id="timeField" editable="false" nodeOrientation="LEFT_TO_RIGHT" />
+                    </graphic>
+                </Label>
+            </items>
+        </ToolBar>
+        <LineChart fx:id="lineChart" animated="false" createSymbols="false" legendSide="RIGHT" prefHeight="1000.0" scaleShape="false">
+            <xAxis>
+                <NumberAxis lowerBound="0" side="BOTTOM" upperBound="20.0" fx:id="xAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" lowerBound="0" side="LEFT" upperBound="5.0" />
+            </yAxis>
+        </LineChart>
+    </children>
+</VBox>
